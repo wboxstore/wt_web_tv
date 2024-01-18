@@ -37,13 +37,11 @@ h1 .separator {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+  width: 100%;
   background-color: #333;
   color: white;
   padding: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
 .menu-btn {
@@ -58,6 +56,7 @@ h1 .separator {
   background-color: #555;
   width: 100%;
   padding: 5px;
+  text-align: center;
 }
 
 .page-btn {
@@ -80,6 +79,11 @@ h1 .separator {
   color: black;
 }
 
+.content {
+ margin-left: 0;
+padding: 50px;
+}
+		
 .content h1 {
   position: fixed;
   top: 50px;
@@ -95,16 +99,10 @@ h1 .separator {
   z-index: 999; /* Certifique-se de que os textos fiquem acima do conteúdo */
 }
 
-.content {
-  margin-left: 0; /* Largura da barra lateral */
-  padding: 50px;
-}
-
 .trailer-container {
   display: flex;
   flex-direction: column;
-  margin-top: 650px; /* Isso empurrará o conteúdo para o final da página */
-  margin-left: 250px; /* Isso empurrará o conteúdo para esquerda ou direita */
+  align-items: center;
 }
 
 .sticky-buttons{
