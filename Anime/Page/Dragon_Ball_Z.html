@@ -7,142 +7,94 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <style>
+      body {
+      background-image: url("http://i.pinimg.com/originals/4b/38/99/4b38998eea046823347486526a71149b.jpg");
+      background-size: 100% auto;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      margin: 0;
+      margin-top: 3%;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-bottom: 8%;
+      background-color: #000000;
+      color: white;
+      overflow: hidden;
+    }
 
-body {
-  background-image: url("http://i.pinimg.com/originals/4b/38/99/4b38998eea046823347486526a71149b.jpg");
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  margin: 0;
-  margin-top: 3%;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 8%;
-  background-color: #000000;
-  color: white;
-  overflow: hidden; /* Adicione esta linha para remover a barra de rolagem */
-}
+    .menu-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .page-btn {
+      margin: 5px;
+      padding: 10px;
+      background-color: #777;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .page-btn:hover {
+      background-color: #F0BD00;
+      color: black;
+    }
+
+    .content {
+      margin: 50px auto;
+      margin-left: 20px;
+    }
 		
- body {color:white;}
-}
+    .trailer-container {
+      margin-top: 20px;
+    }
 
-h1 .separator {
- color: white;
- background-color:#F0BD00;
- font-size: 45px;
- font-family: Arial, sans-serif;
-}
+    .sticky-buttons{
+      display: flex;
+      margin-top: 550px; /* Isso empurrará o conteúdo para o final da página */
+      margin-left: 750px; /* Isso empurrará o conteúdo para esquerda ou direita */
+    }
 
-.menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-  color: white;
-  padding: 5px;
-  text-align: center;
-}
+    .trailer-container {
+      margin-top: 20px;
+    }
 
-.menu-btn {
-  cursor: pointer;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
+    .page {
+      display: none;
+      flex-direction: column;
+      padding: 20px;
+    }
 
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  background-color: #555;
-  width: 100%;
-  padding: 5px;
-  text-align: center;
-}
+ /* Adicionando estilo à barra lateral esquerda */
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 250px; /* Largura da barra lateral */
+      overflow-y: auto;
+    }
 
-.page-btn {
-  margin-bottom: 10px;
-  padding: 5px;
-  background-color: #777;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.page-btn:hover,
-.page-btn.active {
-  background-color: #F0BD00;
-  color: black;
-}
-
-.page-btn.active {
-  background-color: #F0BD00;
-  color: black;
-}
-
-.content {
- margin-left: 0;
-padding: 50px;
-}
+    .trailer, .classname {
+      margin-bottom: 10px;
+    }
 		
-.content h1 {
-  position: fixed;
-  top: 50px;
-  left: 320px;
-  margin: 20px; /* Ajuste a margem conforme necessário */
-  z-index: 999; /* Certifique-se de que os textos fiquem acima do conteúdo */
-}
-.content p {
-  position: fixed;
-  top: 150px;
-  left: 320px;
-  margin: 20px; /* Ajuste a margem conforme necessário */
-  z-index: 999; /* Certifique-se de que os textos fiquem acima do conteúdo */
-}
-
-.trailer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.sticky-buttons{
-  display: flex;
-  margin-top: 30px; /* Isso empurrará o conteúdo para o final da página */
-  margin-left: 0px; /* Isso empurrará o conteúdo para esquerda ou direita */
-}
-
-.trailer-container {
-  align-items: center;
-}
-
-.page {
-  display: none;
-  flex-direction: column;
-  padding: 20px;
-}
-
-/* Adicionando estilo à barra lateral esquerda */
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 250px; /* Largura da barra lateral */
-  overflow-y: auto;
-}
-
-.trailer, .classname {
-  margin-bottom: 10px;
-}
-		
-.trailer {
+    .trailer {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 2px 0px 0px #ffffff;
 	box-shadow:inset 0px 2px 0px 0px #ffffff;
     color: white;
     background-color: #FF0000;
 	transition: background-color 0.3s ease, color 0.3s ease;
-text-indent:0px;
+    text-indent:0px;
 	border:3px solid #000000;
 	display:inline-block;
 	color: #363636;
@@ -150,49 +102,65 @@ text-indent:0px;
 	font-size:24px;
 	font-weight:bold;
 	font-style:normal;
-height:58px;
+    height:58px;
 	line-height:58px;
-width:538px;
+    width:538px;
 	text-decoration:none;
 	text-align:center;
 	text-shadow:1px 1px 0px #9c9c9c;
-}.classname:active {
+    }
+
+    .classname:active {
 	position:relative;
 	top:1px;
-}
+    }
 
-.trailer:active,
-.trailer1:active,
-.trailer:active,
-.trailer1:active {
-position: relative;
-top: 1px;
-}
+    .trailer:active,
+    .trailer1:active,
+    .trailer:active,
+    .trailer1:active {
+    position: relative;
+    top: 1px;
+    }
 
-.trailer:hover,
-.trailer1:hover,
-.trailer:hover,
-.trailer1:hover {
-background-color: #8B0000;
-color: #DCDCDC;
-cursor: pointer;
-}
+    .trailer:hover,
+    .trailer1:hover,
+    .trailer:hover,
+    .trailer1:hover {
+     background-color: #8B0000;
+     color: #DCDCDC;
+     cursor: pointer;
+    }
 
-.hidereset{
-	display:inline-block;
-	font-size: 5rem; 
-	font-style:normal;
-	font-weight:bold;
-	font-family:'MODERNE', monospace;
-	text-align:center; 
-	text-decoration:none;
-    text-indent:0px;
-	color: white; 
-	text-shadow: black 0.2em 0.2em 0.3em
-    width:1000px;
-    margin-top: 60px; /* Isso empurrará o conteúdo para o final da página */
-    margin-left: 15px; /* Isso empurrará o conteúdo para esquerda ou direita */
-}
+    .hidereset {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-left: 15px;
+    }
+	
+    .hidereset {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 15px;
+    }
+
+    .content h1 {
+    position: fixed;
+    top: 50px;
+    left: 320px;
+    margin: 20px; /* Ajuste a margem conforme necessário */
+    z-index: 999; /* Certifique-se de que os textos fiquem acima do conteúdo */
+    }
+	
+    .content p {
+    position: fixed;
+    top: 150px;
+    left: 320px;
+    margin: 20px; /* Ajuste a margem conforme necessário */
+    z-index: 999; /* Certifique-se de que os textos fiquem acima do conteúdo */
+    }
 </style>
 <body>
 
