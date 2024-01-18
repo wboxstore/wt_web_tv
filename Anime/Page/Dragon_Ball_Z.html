@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime: Dragon Ball Z</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+body {
+  background-image: url("http://i.pinimg.com/originals/4b/38/99/4b38998eea046823347486526a71149b.jpg");
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  margin-top: 3%;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-bottom: 8%;
+  background-color: #000000;
+  color: white;
+  overflow: hidden; /* Adicione esta linha para remover a barra de rolagem */
+}
+		
+ body {color:white;}
+}
+
+h1 .separator {
+ color: white;
+ background-color:#F0BD00;
+ font-size: 45px;
+ font-family: Arial, sans-serif;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-btn {
+  cursor: pointer;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #555;
+  padding: 10px;
+}
+
+.page-btn {
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #777;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.page-btn:hover,
+.page-btn.active {
+  background-color: #F0BD00;
+  color: black;
+}
+
+.page-btn.active {
+  background-color: #F0BD00;
+  color: black;
+}
+
+.content h1 {
+  position: fixed;
+  top: 50px;
+  left: 320px;
+  margin: 20px; /* Ajuste a margem conforme necessário */
+  z-index: 999; /* Certifique-se de que os textos fiquem acima do conteúdo */
+}
+.content p {
+  position: fixed;
+  top: 150px;
+  left: 320px;
+  margin: 20px; /* Ajuste a margem conforme necessário */
+  z-index: 999; /* Certifique-se de que os textos fiquem acima do conteúdo */
+}
+
+.content {
+  margin-left: 0; /* Largura da barra lateral */
+  padding: 50px;
+}
+
+.trailer-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 650px; /* Isso empurrará o conteúdo para o final da página */
+  margin-left: 250px; /* Isso empurrará o conteúdo para esquerda ou direita */
+}
+
+.sticky-buttons{
+  display: flex;
+  margin-top: 30px; /* Isso empurrará o conteúdo para o final da página */
+  margin-left: 0px; /* Isso empurrará o conteúdo para esquerda ou direita */
+}
+
+.trailer-container {
+  align-items: center;
+}
+
+.page {
+  display: none;
+  flex-direction: column;
+}
+
+/* Adicionando estilo à barra lateral esquerda */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 250px; /* Largura da barra lateral */
+  overflow-y: auto;
+}
+
+.trailer, .classname {
+  margin-bottom: 10px;
+}
+		
+.trailer {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 2px 0px 0px #ffffff;
+	box-shadow:inset 0px 2px 0px 0px #ffffff;
+    color: white;
+    background-color: #FF0000;
+	transition: background-color 0.3s ease, color 0.3s ease;
+text-indent:0px;
+	border:3px solid #000000;
+	display:inline-block;
+	color: #363636;
+	font-family:'MODERNE', monospace;
+	font-size:24px;
+	font-weight:bold;
+	font-style:normal;
+height:58px;
+	line-height:58px;
+width:538px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #9c9c9c;
+}.classname:active {
+	position:relative;
+	top:1px;
+}
+
+.trailer:active,
+.trailer1:active,
+.trailer:active,
+.trailer1:active {
+position: relative;
+top: 1px;
+}
+
+.trailer:hover,
+.trailer1:hover,
+.trailer:hover,
+.trailer1:hover {
+background-color: #8B0000;
+color: #DCDCDC;
+cursor: pointer;
+}
+
+.hidereset{
+	display:inline-block;
+	font-size: 5rem; 
+	font-style:normal;
+	font-weight:bold;
+	font-family:'MODERNE', monospace;
+	text-align:center; 
+	text-decoration:none;
+    text-indent:0px;
+	color: white; 
+	text-shadow: black 0.2em 0.2em 0.3em
+    width:1000px;
+    margin-top: 180px; /* Isso empurrará o conteúdo para o final da página */
+    margin-left: 15px; /* Isso empurrará o conteúdo para esquerda ou direita */
+}
+</style>
+<body>
+
+<div class="menu-container">
+  <div class="menu-btn">&#9776;</div>
+  <div class="sidebar">
+    <button class="page-btn" data-page="page01">Episódio 01</button>
+    <button class="page-btn" data-page="page02">Episódio 02</button>
+    <button class="page-btn" data-page="page03">Episódio 03</button>
+    <button class="page-btn" data-page="page04">Episódio 04</button>
+    <button class="page-btn" data-page="page05">Episódio 05</button>
+    <button class="page-btn" data-page="page06">Episódio 06</button>
+    <button class="page-btn" data-page="page07">Episódio 07</button>
+    <button class="page-btn" data-page="page08">Episódio 08</button>
+    <button class="page-btn" data-page="page09">Episódio 09</button>
+    <button class="page-btn" data-page="page10">Episódio 10</button>
+    <button class="page-btn" data-page="page11">Episódio 11</button>
+    <button class="page-btn" data-page="page12">Episódio 12</button>
+    <button class="page-btn" data-page="page13">Episódio 13</button>
+    <button class="page-btn" data-page="page14">Episódio 14</button>
+    <button class="page-btn" data-page="page15">Episódio 15</button>
+    <button class="page-btn" data-page="page16">Episódio 16</button>
+    <button class="page-btn" data-page="page17">Episódio 17</button>
+    <button class="page-btn" data-page="page18">Episódio 18</button>
+    <button class="page-btn" data-page="page19">Episódio 19</button>
+    <button class="page-btn" data-page="page20">Episódio 20</button>
+    <button class="page-btn" data-page="page21">Episódio 21</button>
+    <button class="page-btn" data-page="page22">Episódio 22</button>
+    <button class="page-btn" data-page="page23">Episódio 23</button>
+    <button class="page-btn" data-page="page24">Episódio 24</button>
+    <button class="page-btn" data-page="page25">Episódio 25</button>
+    <button class="page-btn" data-page="page26">Episódio 26</button>
+    <button class="page-btn" data-page="page27">Episódio 27</button>
+    <button class="page-btn" data-page="page28">Episódio 28</button>
+    <button class="page-btn" data-page="page29">Episódio 29</button>
+    <button class="page-btn" data-page="page30">Episódio 30</button>	
+  </div>
+</div>
+<div class="content trailer-container">
+<p>
+    <marquee class="hidereset"><font size="13" face="Helvetica">ESTE CONTÉÚDO É EXCLUSIVO DO CANAL SANDRO STORE GAMES, NÃO COMPARTILHE COM TERCEIROS.</font></marquee>
+</p>
+  <div class="page" id="page01" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 01</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Surge um Mini-Goku! Seu Nome é Gohan</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/01.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page02" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 02</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Um Guerreiro Muito Poderoso com Antecedentes Históricos: o Irmão Mais Velho</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/02.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page03" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 03</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: A Combinação Mais Forte Deste Mundo</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/03.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page04" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 04</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Piccolo Usa sua Melhor Estratégia! Gohan</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/04.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page05" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 05</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Goku Morre! Só Existe uma Chance!</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/05.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page06" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 06</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Enma-Sama Também se Surpreende! Terá que Lutar no Outro Mundo</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/06.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page07" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 07</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: É Preciso Sobreviver aos Dinossauros! O Difícil Treinamento de Gohan</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/07.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page08" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 08</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Uma Transformação por Causa da Lua! O Poder Secreto de Gohan</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/08.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page09" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 09</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Perdão Sr. Robô! Lágrimas que Desaparecem no Deserto</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/09.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page10" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 10</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Não Chore Gohan! É a Primeira Batalha</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/10.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page11" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 11</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Os Guerreiros Mais Fortes do Universo! O Despertar dos Saiyajins</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/11.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page12" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 12</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Um Pequeno Descanso! Goku Cai do Caminho da Serpente</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/12.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page13" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 13</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Não Toque Nisso! A Fruta Secreta de Enma-Sama</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/13.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page14" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 14</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Uma Doce Tentação! A Hospitalidade da Princesa Serpente</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/14.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page15" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 15</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Fugindo de Piccolo! Gohan Enfrenta uma Tempestade</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/15.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page16" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 16</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Corre Gohan! Chi-Chi o Espera na Montanha Paozu</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/16.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page17" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 17</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Uma Cidade sem Futuro! Um Longo Caminho até a Vitória</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/17.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page18" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 18</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: O Final do Caminho da Serpente! É o Sr. Kaioh?</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/18.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page19" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 19</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Domine a Força da Gravidade! Agarre Bubbles</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/19.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page20" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 20</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: A Lenda Revive! Os Antepassados de Goku</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/20.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page21" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 21</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Sai Daí Shenlong! Os Saiyajins Chegaram à Terra</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/21.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page22" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 22</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Impossível! Saibaimans Nascidos da Terra?</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/22.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page23" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 23</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Yamcha Morre! Os Temíveis Saibaimans</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/23.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>
+  <div class="page" id="page24" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 24</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Adeus Tenshin! A Arte do Sacrifício de Chaos</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/24.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>  
+  <div class="page" id="page25" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 25</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: O Sacrifício de Tenshinhan! O Último Kikohou</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/25.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div> 
+  <div class="page" id="page26" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 26</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Só Restam Três Horas de Vida na Terra! Apresse-se Goku</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/26.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div> 
+  <div class="page" id="page27" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 27</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Explode a Fúria de Gohan!</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/27.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div> 
+  <div class="page" id="page28" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 28</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: O Ataque dos Saiyajins! Kami-Sama e Piccolo Morrem</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/28.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div> 
+  <div class="page" id="page29" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 29</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Papai Você é Incrível! Uma Técnica Mortal Chamada Kaioh-ken</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/29.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div> 
+  <div class="page" id="page30" class="trailer-container"><h1 style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 3rem">Episódio 30</h1><p style="text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000; color: white; font-size: 2rem">Título: Uma Luta Além dos Limites! Goku Contra Vegeta</p><a href="http://content-ps3.sandrostoreps3.workers.dev/playps3/Animes/Dragon.Ball.Z/30.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Assistir Episódio</a>&nbsp;&nbsp;</div>   
+    <center>
+    <div class="sticky-buttons">
+    <footer>
+        <img border="3px" width="100" height="100" src="http://view.sandrostoreps3.workers.dev/img/logo/webmanboxstore.png"></img>
+        <h4 style="text-align:center; color: white; text-shadow: black 0.1em 0.1em 0.2em">Copyright 2023 © Sandro Store Games™</h4>
+        <h3 style="text-align:center; color: white; text-shadow: black 0.1em 0.1em 0.2em">Todos os direitos Reservados</h3>
+    </footer>
+	</center>		
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="script.js"></script>
+</body>
+<style type="text/css">
+  #player_9428 {
+    display: none;
+  }
+</style>
+<script type="text/javascript" src="http://view.sandrostoreps3.workers.dev/music_player/flash_objects.js"></script>
+<div id="player_9428" align="center">
+<script type="text/javascript">
+            var flashvars_9428 = {};
+            var params_9428 = {
+            quality: "low",
+            wmode: "transparent",
+            bgcolor: "#ffffff",
+            allowScriptAccess: "always",
+            allowFullScreen: "true",
+            flashvars: "url=http://content-ps3.sandrostoreps3.workers.dev/music_player/media/anime/xmb/dbz.mp3&autostart=yes"
+            };
+            var attributes_9428 = {};
+            flashObject("http://view.sandrostoreps3.workers.dev/music_player/swf/music_player_4.swf", "player_9428", "600", "35", "8", false, flashvars_9428, params_9428, attributes_9428);
+</script>
+</div>
+<script>
+$(document).ready(function () {
+  // Inicializar o menu deslizante
+  $(".menu-btn").click(function () {
+    $(".sidebar").toggleClass("show");
+  });
+
+  // Mostrar a Episódio correspondente ao botão clicado
+  $(".page-btn").click(function () {
+    var pageId = $(this).data("page");
+    $(".page").hide();
+    $("#" + pageId).show();
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var pageButtons = document.querySelectorAll(".page-btn");
+
+  // Inicializar o menu deslizante
+  document.querySelector(".menu-btn").addEventListener("click", function () {
+    document.querySelector(".sidebar").classList.toggle("show");
+  });
+
+  // Adicionar evento de clique a cada botão da página
+  pageButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      // Remover a classe 'active' de todos os botões
+      pageButtons.forEach(function (btn) {
+        btn.classList.remove("active");
+        // Resetar a cor de todos os botões para a cor original (amarelo)
+        btn.style.backgroundColor = "#777";
+        btn.style.color = "white";
+      });
+
+      // Adicionar a classe 'active' ao botão clicado
+      this.classList.add("active");
+
+      // Mudar a cor do botão clicado para vermelho
+      this.style.backgroundColor = "#FF0000";
+      this.style.color = "white";
+
+      var pageId = this.dataset.page;
+      var pages = document.querySelectorAll(".page");
+      pages.forEach(function (page) {
+        page.style.display = "none";
+      });
+
+      document.getElementById(pageId).style.display = "block";
+    });
+
+    // Adicionar evento de passar o cursor para alterar a cor quando não estiver ativo
+    button.addEventListener("mouseenter", function () {
+      if (!this.classList.contains("active")) {
+        this.style.backgroundColor = "#F0BD00"; // Amarelo
+        this.style.color = "white";
+      }
+    });
+
+    // Adicionar evento de sair do cursor para reverter a cor quando não estiver ativo
+    button.addEventListener("mouseleave", function () {
+      if (!this.classList.contains("active")) {
+        this.style.backgroundColor = "#777"; // Amarelo original
+        this.style.color = "white";
+      }
+    });
+  });
+});
+</script>
+</html>
