@@ -1,101 +1,345 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu SSL PS3</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<head><link rel="icon" type="image/png" href="http://view.sandrostoreps3.workers.dev/img/download.png"/><title>Game Page</title></head>
+   <body scroll="no">
+
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+			 
+@font-face {
+  font-family: 'MODERNE';
+  font-style: normal;
+  font-weight: 400;
+  src: url('MODERNE%20SANS.eot'); /* IE9 Compat Modes */
+  src: local('MODERNE Regular'), local('MODERNE SANS'),
+       url('MODERNE%20SANSd41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('MODERNE%20SANS.woff2') format('woff2'), /* Super Modern Browsers */
+       url('MODERNE%20SANS.woff') format('woff'), /* Modern Browsers */
+       url('MODERNE%20SANS.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('MODERNE%20SANS.svg#MODERNE') format('svg'); /* Legacy iOS */
 }
 
-#menu-container {
-  display: flex;
+.hidereset{
+	display:inline-block;
+	font-size: 5rem; 
+	font-style:normal;
+	font-weight:bold;
+	font-family:'MODERNE', monospace;
+	text-align:center; 
+	text-decoration:none;
+    text-indent:0px;
+	color: white; 
+	text-shadow: black 0.2em 0.2em 0.3em
+    width:1000px;
 }
 
-#sliding-menu {
-  display: flex;
-  flex-direction: column;
-  background-color: #444;
-  padding: 10px;
+.classname {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 2px 0px 0px #ffffff;
+	box-shadow:inset 0px 2px 0px 0px #ffffff;
+	background-color: #DCDCDC;
+	transition: background-color 0.3s ease, color 0.3s ease;
+text-indent:0px;
+	border:3px solid #000000;
+	display:inline-block;
+	color: #363636;
+	font-family:'MODERNE', monospace;
+	font-size:24px;
+	font-weight:bold;
+	font-style:normal;
+height:50px;
+	line-height:58px;
+width:400px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #9c9c9c;
+}.classname:active {
+	position:relative;
+	top:1px;
 }
 
-.menu-button {
-  padding: 10px;
-  margin: 5px;
-  border: none;
-  background-color: #444;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.classname:active,
+.classname1:active,
+.classname:active,
+.classname1:active {
+position: relative;
+top: 1px;
 }
 
-.menu-button:hover {
-  background-color: #555;
+.classname:hover,
+.classname1:hover,
+.classname:hover,
+.classname1:hover {
+background-color: #4F4F4F;
+color: #DCDCDC;
+cursor: pointer;
 }
 
-#content {
-  margin-left: 120px; /* Largura do menu lateral */
-  padding: 20px;
+.trailer {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 2px 0px 0px #ffffff;
+	box-shadow:inset 0px 2px 0px 0px #ffffff;
+    color: white;
+    background-color: #FF0000;
+	transition: background-color 0.3s ease, color 0.3s ease;
+text-indent:0px;
+	border:3px solid #000000;
+	display:inline-block;
+	color: #363636;
+	font-family:'MODERNE', monospace;
+	font-size:24px;
+	font-weight:bold;
+	font-style:normal;
+height:58px;
+	line-height:58px;
+width:300px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #9c9c9c;
+}.classname:active {
+	position:relative;
+	top:1px;
 }
 
-.section {
-  display: none;
+.trailer:active,
+.trailer1:active,
+.trailer:active,
+.trailer1:active {
+position: relative;
+top: 1px;
 }
 
-.section.active {
-  display: block;
+.trailer:hover,
+.trailer1:hover,
+.trailer:hover,
+.trailer1:hover {
+background-color: #8B0000;
+color: #DCDCDC;
+cursor: pointer;
 }
+
+
+html, body {
+	text-align: center;
+}
+
+ul {
+    font-family: 'MODERNE', monospace;
+	font-size: 1rem;	
+	color: #000000  ;
+	margin:5px;
+	
+}
+
+h1 {
+    font-family: 'MODERNE', monospace;
+	font-size: 10rem;	
+	color: #000000  ;
+	margin:5px;
+	color: #000000;
+    text-shadow: 1px 1px 10px #777777;
+}
+
+h2 {
+    font-family: 'MODERNE', monospace;
+	font-size: 3rem;	
+	margin:5px;
+	color: #000000;
+    text-shadow: 1px 1px 2px #777777;
+	
+}
+
+
+h3 	{
+    font-family: 'MODERNE', monospace;
+	font-size: 1rem;	
+	margin:5px;
+	color: #000000;
+    text-shadow: 1px 1px 2px #777777;
+	
+}
+      body {
+            background-image: url("http://content-ps3.sandrostoreps3.workers.dev/backgrounds/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.jpg");
+            background-size: 100% auto;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            margin-top: 3%;
+            margin-left: 8%;
+            margin-right: 8%;
+            margin-bottom: 8%;
+            background-color: #000000;
+            color: white;
+        }
+        .sticky-buttons {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 100%;
+            margin-top: 0px; /* Isso empurrará o conteúdo para o final da página */
+            margin-left: 200px; /* Isso empurrará o conteúdo para esquerda ou direita */
+        }
+
+        .trailer, .classname {
+            margin-bottom: 10px;
+            margin-right: 1000px; /* Isso empurrará o conteúdo para esquerda ou direita */
+        }
+        .transparent-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            max-width: 3000px;
+            max-height: 500px; /* Adjust the maximum height as needed */
+            overflow-y: auto; /* Enable vertical scrolling */
+            margin-top: 30px;
+        }
+
+        /* Rest of your existing styles */
+
+        /* Add the following style to center the text within the box 
+		
+        .center-text {
+            text-align: center;
+        }
 </style>
-  <div id="menu-container">
-    <nav id="sliding-menu">
-      <button class="menu-button" data-page="section1">Página Inicial</button>
-      <button class="menu-button" data-page="section2">Sobre</button>
-      <button class="menu-button" data-page="section3">Serviços</button>
-      <button class="menu-button" data-page="section4">Contato</button>
-    </nav>
-  </div>
-
-  <div id="content">
-    <div class="section" id="section1">
-      <h2>Página Inicial</h2>
-      <p>Conteúdo da Página Inicial.</p>
-    </div>
-
-    <div class="section" id="section2">
-      <h2>Sobre</h2>
-      <p>Conteúdo sobre a empresa.</p>
-    </div>
-
-    <div class="section" id="section3">
-      <h2>Serviços</h2>
-      <p>Nossos serviços incríveis.</p>
-    </div>
-
-    <div class="section" id="section4">
-      <h2>Contato</h2>
-      <p>Entre em contato conosco.</p>
-    </div>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="script.js"></script>
-
-<script>
-$(document).ready(function () {
-  var contentSections = $('.section');
-
-  $('button.menu-button').click(function () {
-    var targetSection = $(this).data('page');
-    contentSections.removeClass('active');
-    $('#' + targetSection).addClass('active');
-  });
-});
-</script>
 </body>
+
+    <div class="cap-buttons">
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>		
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+</br>
+        <a href="http://content-ps3.sandrostoreps3.workers.dev/trailers/ps1/iso/007.-.Tomorrow.Never.Dies.-.D-BR.mp4" style="color: white;" class="trailer" onclick="handleButtonClick(this)">Episódio 01</a>&nbsp;&nbsp;
+	
+    </div>
+    <center>
+    <div class="sticky-buttons">
+    <footer>
+
+        <img border="3px" width="100" height="100" src="http://view.sandrostoreps3.workers.dev/img/logo/webmanboxstore.png"></img>
+        <h4 style="text-align:center; color: white; text-shadow: black 0.1em 0.1em 0.2em">Copyright 2023 © Sandro Store Games™</h4>
+        <h3 style="text-align:center; color: white; text-shadow: black 0.1em 0.1em 0.2em">Todos os direitos Reservados</h3>
+    </footer>
+<p>
+    <marquee class="hidereset"><font size="13" face="Helvetica">ESTE CONTÉÚDO É EXCLUSIVO DO CANAL SANDRO STORE GAMES, NÃO COMPARTILHE COM TERCEIROS.</font></marquee>
+</p>
+	</center>		
+    </div>
+<style type="text/css">
+  #player_9428 {
+    display: none;
+  }
+</style>
+
+        <script type="text/javascript" src="http://view.sandrostoreps3.workers.dev/music_player/flash_objects.js"></script>
+<div id="player_9428" align="center">
+        <script type="text/javascript">
+            var flashvars_9428 = {};
+            var params_9428 = {
+            quality: "low",
+            wmode: "transparent",
+            bgcolor: "#ffffff",
+            allowScriptAccess: "always",
+            allowFullScreen: "true",
+            flashvars: "url=http://content-ps3.sandrostoreps3.workers.dev/music_player/media/anime/xmb/dbz.mp3&autostart=yes"
+            };
+            var attributes_9428 = {};
+            flashObject("http://view.sandrostoreps3.workers.dev/music_player/swf/music_player_4.swf", "player_9428", "600", "35", "8", false, flashvars_9428, params_9428, attributes_9428);
+        </script>
+</div>
+        <script>
+            
+            function handleButtonClick(element) {
+                
+                element.style.backgroundColor = '#FF8C00';
+
+                
+                var audio = new Audio('http://view.sandrostoreps3.workers.dev/sound/mouse-click-117076.mp3');
+                audio.play();
+            }
+
+            
+            function handleButtonClick2(element) {
+                
+                element.style.backgroundColor = '#FF8C00';
+
+                
+                var audio = new Audio('http://view.sandrostoreps3.workers.dev/sound/mouse-click-117076.mp3');
+                audio.play();
+            }
+        </script>
 </html>
