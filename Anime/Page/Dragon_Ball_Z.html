@@ -3,89 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Deslizante</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      overflow-x: hidden; /* Evitar a barra de rolagem horizontal */
-    }
-
-    header {
-      background-color: #333;
-      padding: 10px;
-      color: #fff;
-      text-align: center;
-    }
-
-    nav {
-      display: none;
-      background-color: #444;
-      padding: 10px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 250px;
-      z-index: 1000;
-      overflow-y: auto; /* Adicionado rolagem vertical */
-    }
-
-    nav a {
-      display: block;
-      color: #fff;
-      text-decoration: none;
-      padding: 10px;
-      margin: 5px;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    nav a:hover {
-      background-color: #555;
-    }
-
-    #menu-icon {
-      display: block;
-      cursor: pointer;
-      font-size: 24px;
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 1001;
-      color: #fff;
-    }
-
-    /* Adicionado estilo para o conteúdo principal */
-    #content {
-      margin-left: 250px; /* Largura do menu lateral */
-      padding: 20px;
-    }
-
-    /* Estilo adicional para as seções de conteúdo */
-    .section {
-      display: none;
-    }
-
-    .section.active {
-      display: block;
-    }
-  </style>
+  <title>Menu SSL PS3</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-  <header>
-    <h1>Meu Site</h1>
-  </header>
+#menu-container {
+  display: flex;
+}
 
-  <nav id="sliding-menu">
-    <a href="#" data-section="section1">Página Inicial</a>
-    <a href="#" data-section="section2">Sobre</a>
-    <a href="#" data-section="section3">Serviços</a>
-    <a href="#" data-section="section4">Contato</a>
-  </nav>
+#menu-icon {
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+}
 
-  <div id="menu-icon">&#9776;</div>
+#sliding-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #444;
+  padding: 10px;
+}
+
+.menu-button {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+  background-color: #555;
+}
+
+#content {
+  margin-left: 120px; /* Largura do menu lateral */
+  padding: 20px;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+</style>
+  <div id="menu-container">
+    <div id="menu-icon">&#9776;</div>
+
+    <nav id="sliding-menu">
+      <button class="menu-button" data-page="section1">Página Inicial</button>
+      <button class="menu-button" data-page="section2">Sobre</button>
+      <button class="menu-button" data-page="section3">Serviços</button>
+      <button class="menu-button" data-page="section4">Contato</button>
+    </nav>
+  </div>
 
   <div id="content">
     <div class="section" id="section1">
@@ -110,40 +92,41 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      var menuVisible = false;
-      var slidingMenu = $('#sliding-menu');
-      var menuIcon = $('#menu-icon');
-      var contentSections = $('.section');
+  <script src="script.js"></script>
 
-      menuIcon.click(function () {
-        if (!menuVisible) {
-          slidingMenu.slideDown();
-        } else {
-          slidingMenu.slideUp();
-        }
-        menuVisible = !menuVisible;
-      });
+<script>
+$(document).ready(function () {
+  var menuVisible = false;
+  var slidingMenu = $('#sliding-menu');
+  var menuIcon = $('#menu-icon');
+  var contentSections = $('.section');
 
-      slidingMenu.find('a').click(function (e) {
-        e.preventDefault();
-        var targetSection = $(this).data('section');
-        contentSections.removeClass('active');
-        $('#' + targetSection).addClass('active');
-        slidingMenu.slideUp();
-        menuVisible = false;
-      });
+  menuIcon.click(function () {
+    if (!menuVisible) {
+      slidingMenu.slideDown();
+    } else {
+      slidingMenu.slideUp();
+    }
+    menuVisible = !menuVisible;
+  });
 
-      $(window).resize(function () {
-        if ($(window).width() > 600) {
-          slidingMenu.show();
-        } else {
-          slidingMenu.hide();
-          menuVisible = false;
-        }
-      });
-    });
-  </script>
+  slidingMenu.find('button').click(function () {
+    var targetSection = $(this).data('page');
+    contentSections.removeClass('active');
+    $('#' + targetSection).addClass('active');
+    slidingMenu.slideUp();
+    menuVisible = false;
+  });
+
+  $(window).resize(function () {
+    if ($(window).width() > 600) {
+      slidingMenu.show();
+    } else {
+      slidingMenu.hide();
+      menuVisible = false;
+    }
+  });
+});
+</script>
 </body>
 </html>
