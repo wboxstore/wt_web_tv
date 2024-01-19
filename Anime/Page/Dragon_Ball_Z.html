@@ -17,12 +17,6 @@ body {
   display: flex;
 }
 
-#menu-icon {
-  cursor: pointer;
-  font-size: 24px;
-  padding: 10px;
-}
-
 #sliding-menu {
   display: flex;
   flex-direction: column;
@@ -59,8 +53,6 @@ body {
 }
 </style>
   <div id="menu-container">
-    <div id="menu-icon">&#9776;</div>
-
     <nav id="sliding-menu">
       <button class="menu-button" data-page="section1">Página Inicial</button>
       <button class="menu-button" data-page="section2">Sobre</button>
@@ -96,35 +88,12 @@ body {
 
 <script>
 $(document).ready(function () {
-  var menuVisible = false;
-  var slidingMenu = $('#sliding-menu');
-  var menuIcon = $('#menu-icon');
   var contentSections = $('.section');
 
-  menuIcon.click(function () {
-    if (!menuVisible) {
-      slidingMenu.slideDown();
-    } else {
-      slidingMenu.slideUp();
-    }
-    menuVisible = !menuVisible;
-  });
-
-  slidingMenu.find('button').click(function () {
+  $('button.menu-button').click(function () {
     var targetSection = $(this).data('page');
     contentSections.removeClass('active');
     $('#' + targetSection).addClass('active');
-    slidingMenu.slideUp();
-    menuVisible = false;
-  });
-
-  $(window).resize(function () {
-    if ($(window).width() > 600) {
-      slidingMenu.show();
-    } else {
-      slidingMenu.hide();
-      menuVisible = false;
-    }
   });
 });
 </script>
